@@ -1,0 +1,147 @@
+html{
+    height:100%;
+    width:100%;
+    background-color: rgba(222, 184, 135, 0.295);
+}
+body{
+    height:100%;
+    width:100%;
+    display:grid;
+    grid-template:1fr 5fr 1fr/1fr 3fr 1fr;
+    grid-template-areas: ". . ." ". calc ." ". . .";
+}
+#calculator{
+    max-height:450px;
+    max-width:270px;
+    margin-left:30%;
+    border-radius: 30px;
+    grid-area: calc;
+    background-color: rgba(0, 0, 0, 0.74);
+    display: grid;
+    grid-template:2fr 5fr/1fr; 
+    grid-template-areas: 
+    "disp"
+    "btn";
+}
+#display{
+    grid-area: disp;
+    background-color: black;
+    color: blanchedalmond;
+    text-align: right;
+    padding:5% 5% 5% 5%;
+    display: grid;
+    grid-template:1fr 3fr;
+}
+#expression{
+    font-size: x-large; 
+}
+button{
+    border-width: 0px;
+    outline: none;
+}
+button:hover{
+    border-width: 2px;
+}
+.btns{
+    text-align: center;
+    grid-area: btn;
+    display: grid;
+    grid-template:1fr 3fr/3fr 2fr; 
+    grid-template-areas: 
+    "n clr"
+    "n op";
+}
+.digits{
+    grid-area: n;
+    display: grid;
+    grid-gap: 10px;
+    grid-template: repeat(4, 1fr)/repeat(3, 1fr);
+    border-radius: 20px;
+    padding-top: 20%;
+    margin-left:5% ;
+    margin-bottom: 5%;
+}
+.digits>*{
+    padding-top: 20%;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.61);
+    color: blanchedalmond;
+}
+.clearBtns{
+    grid-area: clr;
+    display: grid;
+    grid-gap: 10px;
+    grid-template: 1fr/1fr 1fr;
+    border-radius: 20px;
+    padding: 20% 5% 5% 10%;
+}
+.clearBtns>*{
+    border-radius: 100px;
+    background-color: rgba(253, 14, 6, 0.719);
+    color: blanchedalmond;
+    padding-top:20%;
+}
+.operators{
+    grid-area: op;
+    display: grid;
+    grid-gap: 10px;
+    grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+    padding-top: 20%;
+    padding-left: 10%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    border-radius: 20px;
+}
+.operators>*{
+    border-radius: 100px;
+    background-color: rgba(253, 117, 6, 0.425);
+    color: blanchedalmond;
+    padding-top:40%;
+}
+/*
+#allclear{
+    grid-area: ac;
+}
+#clear{
+    grid-area: c;
+    flex-basis: 50%;
+
+}
+
+#mod{
+    grid-area: mod;
+    flex-basis: 50%;
+    padding-top: 20%;
+    border-radius: 20px;
+}
+#div{
+    grid-area: div;
+    flex-basis: 50%;
+    padding-top: 20%;
+    border-radius: 20px;
+}
+#prod{
+    grid-area: prod;
+    flex-basis: 50%;
+    padding-top: 20%;
+    border-radius: 20px;
+}
+#sub{
+    grid-area: subt;
+    flex-basis: 50%;
+    padding-top: 20%;
+    border-radius: 20px;
+}
+#add{
+    grid-area: adds;
+    flex-basis: 50%;
+    padding-top: 20%;
+    border-radius: 20px;
+}
+#equal{
+    grid-area: equal;
+    flex-basis: 50%;
+    padding-top: 20%;
+    border-radius: 20px;
+}
+*/
